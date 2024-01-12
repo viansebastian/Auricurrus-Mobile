@@ -9,7 +9,7 @@ An IoT based solution to support the deaf in driving. Team HackAttack's idea for
 4. Create a new terminal and run the main.dart.
 5. Login using Google Account.
    
-A few resources to get you started if this is your first Flutter project:
+Check out the official Flutter documentation
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
