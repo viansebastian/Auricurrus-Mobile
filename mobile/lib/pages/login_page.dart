@@ -37,15 +37,15 @@ class _LoginPageState extends State<LoginPage> {
         user = event;
       });
     });
-    // connectServer();
-    // receiveMessage();
+    connectServer();
+    receiveMessage();
     debugPrint('hello $user, from loginpage');
   }
 
   void connectServer() {
     socket.connect();
     socket.onConnect((_) {
-      debugPrint('connected to server blabla');
+      debugPrint('connected to server from login page');
     });
     socket.on('connect_error', (data) {
       debugPrint('Error connecting to server: $data');
