@@ -16,8 +16,11 @@ An IoT based solution to support the deaf in driving. Team HackAttack's idea for
 4. Alana Jocelyn Natania Massie
 5. Jalalludin Mukhtafi
 
-Check out the official Flutter documentation
+## Features
+1. Authentication
+2. Database
 
+## Check out the official Flutter documentation
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
