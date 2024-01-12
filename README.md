@@ -1,6 +1,6 @@
 # Auricurrus
 
-An IoT based solution to support the deaf in driving.
+An IoT based solution to support the deaf in driving. Team HackAttack's idea for the Google Solutions Challenge 2024.
 
 ## Setting up
 1. Refer to our [documentation]() and IoT's [repository](https://github.com/viansebastian/Auricurrus-Watch).
