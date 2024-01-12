@@ -1,0 +1,60 @@
+[debug] [2024-01-04T05:37:05.935Z] ----------------------------------------------------------------------
+[debug] [2024-01-04T05:37:05.940Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vian8\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2024-01-04T05:37:05.941Z] CLI Version:   13.0.2
+[debug] [2024-01-04T05:37:05.941Z] Platform:      win32
+[debug] [2024-01-04T05:37:05.942Z] Node Version:  v20.10.0
+[debug] [2024-01-04T05:37:05.942Z] Time:          Thu Jan 04 2024 12:37:05 GMT+0700 (Western Indonesia Time)
+[debug] [2024-01-04T05:37:05.942Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-04T05:37:05.954Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-04T05:37:05.954Z] > authorizing via signed-in user (viansbromokusumo@gmail.com)
+[debug] [2024-01-04T05:37:05.966Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2024-01-04T05:37:25.978Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-01-04T05:37:25.979Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌───────────────────────┬─────────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name  │ Project ID                  │ Project Number │ Resource Location ID │
+├───────────────────────┼─────────────────────────────┼────────────────┼──────────────────────┤
+│ Auricurrus            │ auricurrus                  │ 526244443879   │ [Not specified]      │
+├───────────────────────┼─────────────────────────────┼────────────────┼──────────────────────┤
+│ lab-monitoring-system │ lab-monitoring-system-7f4d2 │ 620793170711   │ [Not specified]      │
+├───────────────────────┼─────────────────────────────┼────────────────┼──────────────────────┤
+│ NoteApp               │ noteapp-ae7d3               │ 821431022792   │ [Not specified]      │
+└───────────────────────┴─────────────────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 3 project(s) total.
+[debug] [2024-01-04T05:37:36.028Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\vian8\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:258:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-04T05:38:07.468Z] ----------------------------------------------------------------------
+[debug] [2024-01-04T05:38:07.473Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vian8\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2024-01-04T05:38:07.474Z] CLI Version:   13.0.2
+[debug] [2024-01-04T05:38:07.475Z] Platform:      win32
+[debug] [2024-01-04T05:38:07.475Z] Node Version:  v20.10.0
+[debug] [2024-01-04T05:38:07.475Z] Time:          Thu Jan 04 2024 12:38:07 GMT+0700 (Western Indonesia Time)
+[debug] [2024-01-04T05:38:07.476Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-04T05:38:07.488Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-04T05:38:07.489Z] > authorizing via signed-in user (viansbromokusumo@gmail.com)
+[debug] [2024-01-04T05:38:07.499Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2024-01-04T05:38:27.151Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-01-04T05:38:27.152Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌───────────────────────┬─────────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name  │ Project ID                  │ Project Number │ Resource Location ID │
+├───────────────────────┼─────────────────────────────┼────────────────┼──────────────────────┤
+│ Auricurrus            │ auricurrus                  │ 526244443879   │ [Not specified]      │
+├───────────────────────┼─────────────────────────────┼────────────────┼──────────────────────┤
+│ lab-monitoring-system │ lab-monitoring-system-7f4d2 │ 620793170711   │ [Not specified]      │
+├───────────────────────┼─────────────────────────────┼────────────────┼──────────────────────┤
+│ NoteApp               │ noteapp-ae7d3               │ 821431022792   │ [Not specified]      │
+└───────────────────────┴─────────────────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 3 project(s) total.
+[debug] [2024-01-04T05:38:36.668Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\vian8\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:258:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
