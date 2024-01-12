@@ -3,7 +3,7 @@
 An IoT based solution to support the deaf in driving.
 
 ## Setting up
-1. Refer to our [documentation]() and IoT's [repository]().
+1. Refer to our [documentation]() and IoT's [repository](https://github.com/viansebastian/Auricurrus-Watch).
 2. Clone this and the IoT's repository.
 3. In the root directory, run 'npm run server' to start the websocket server.
 4. Create a new terminal and run the main.dart.
