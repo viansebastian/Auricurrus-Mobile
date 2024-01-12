@@ -1,11 +1,14 @@
-# test
+# Auricurrus
 
-A new Flutter project.
+An IoT based solution to support the deaf in driving.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
+## Setting up
+1. Refer to our [documentation]() and IoT's [repository]().
+2. Clone this and the IoT's repository.
+3. In the root directory, run 'npm run server' to start the websocket server.
+4. Create a new terminal and run the main.dart.
+5. Login using Google Account.
+   
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
