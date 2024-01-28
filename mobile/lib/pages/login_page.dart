@@ -1,25 +1,22 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:provider/provider.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:sign_in_button/sign_in_button.dart';
-import 'package:test/controllers/auth-service.dart';
-import 'package:test/controllers/chat.dart';
-import 'package:test/controllers/db-service.dart';
-import 'package:test/pages/home_page.dart';
+import 'package:test/login_controller/login_controller.dart';
+import 'package:test/login_controller/login_state.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends StatefulHookConsumerWidget {
   const LoginPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  ConsumerState<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends ConsumerState<LoginPage> {
   // final dbService _service = dbService();
-  GoogleSignIn googleSignIn = GoogleSignIn();
-  FirebaseAuth auth = FirebaseAuth.instance;
+  // GoogleSignIn googleSignIn = GoogleSignIn();
+  // FirebaseAuth auth = FirebaseAuth.instance;
   User? user;
   TextEditingController messageController = TextEditingController();
   List<String> messages = [];
@@ -32,11 +29,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    auth.authStateChanges().listen((event) {
-      setState(() {
-        user = event;
-      });
-    });
+    // auth.authStateChanges().listen((event) {
+    //   setState(() {
+    //     user = event;
+    //   });
+    // });
     connectServer();
     receiveMessage();
     debugPrint('hello $user, from loginpage');
@@ -69,24 +66,24 @@ class _LoginPageState extends State<LoginPage> {
     });
   }
 
-  void gSignIn() async {
-    final authService = Provider.of<AuthService>(context, listen: false);
-    try {
-      await authService.handleGoogleSignIn();
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(
-            e.toString(),
-          ),
-        ),
-      );
-    }
-  }
+  // void gSignIn() async {
+  //   final authService = Provider.of<AuthService>(context, listen: false);
+  //   try {
+  //     await authService.handleGoogleSignIn();
+  //   } catch (e) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(
+  //         content: Text(
+  //           e.toString(),
+  //         ),
+  //       ),
+  //     );
+  //   }
+  // }
 
   void signOut() async {
-    final authService = Provider.of<AuthService>(context, listen: false);
-    await authService.signOut();
+    // final authService = Provider.of<AuthService>(context, listen: false);
+    // await authService.signOut();
   }
 
   Widget googleSignInButton() {
@@ -96,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
         child: SignInButton(
           Buttons.google,
           text: 'Sign up with Google',
-          onPressed: gSignIn,
+          onPressed: ref.read(loginControllerProvider.notifier).login,
         ),
       ),
     );
@@ -146,6 +143,16 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    ref.listen<LoginState>(loginControllerProvider, ((previous, state) {
+      if (state is LoginStateError) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('error'),
+          ),
+        );
+      }
+    }));
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Auricurrus'),
